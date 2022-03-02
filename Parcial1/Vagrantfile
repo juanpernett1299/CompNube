@@ -1,0 +1,24 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  config.vm.define :frontServer do |frontServer|
+      frontServer.vm.box = "bento/ubuntu-20.04"
+      frontServer.vm.network :private_network, ip: "192.168.100.2"
+      frontServer.vm.provision "shell", path: "scriptproxy.sh"
+      frontServer.vm.hostname = "frontServer"
+  end
+  config.vm.define :backServer1 do |backServer1|
+      backServer1.vm.box = "bento/ubuntu-20.04"
+      backServer1.vm.network :private_network, ip: "192.168.100.3"
+      backServer1.vm.provision "shell", path: "scriptweb1.sh"
+      backServer1.vm.hostname = "backServer1"
+  end
+  config.vm.define :backServer2 do |backServer2|
+    backServer2.vm.box = "bento/ubuntu-20.04"
+    backServer2.vm.network :private_network, ip: "192.168.100.5"
+    backServer2.vm.provision "shell", path: "scriptweb2.sh"
+    backServer2.vm.hostname = "backServer2"
+  end
+end

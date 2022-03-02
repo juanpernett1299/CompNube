@@ -1,0 +1,10 @@
+HTTP/1.0 503 Service Unavailable
+Cache-Control: no-cache
+Connection: close
+Content-Type: text/html
+
+<html> 
+  <body>
+        <h1>LO SENTIMOS, NO HAY SERVIDORES DISPONIBLES</h1>
+  </body> 
+</html>
