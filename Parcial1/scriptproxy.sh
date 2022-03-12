@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#sudo sudo snap install lxd
-#sudo gpasswd -a vagrant lxd
-#cat /vagrant/fspreseed.yaml | lxd init --preseed
-#cat /vagrant/network.yaml | lxc network edit lxdfan0
-#sudo cp /var/snap/lxd/common/lxd/cluster.crt /vagrant/cluster.crt
+sudo sudo snap install lxd
+sudo gpasswd -a vagrant lxd
+cat /vagrant/fspreseed.yaml | lxd init --preseed
+cat /vagrant/network.yaml | lxc network edit lxdfan0
+sudo cp /var/snap/lxd/common/lxd/cluster.crt /vagrant/cluster.crt
 
 
 echo "Creando contenedor"
